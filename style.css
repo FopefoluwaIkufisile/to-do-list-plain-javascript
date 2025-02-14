@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: blanchedalmond;
+}
+.container {
+  width: 400px;
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.todo {
+  display: flex;
+  align-items: center;
+  color: orange;
+  font-size: 25px;
+}
+#todo-image {
+  width: 32px;
+  height: 32px;
+}
+.search-box {
+  display: flex;
+  background-color: rgb(236, 232, 232);
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+  padding-left: 20px;
+  margin: 25px 0;
+}
+.search {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 16px;
+}
+#add-task {
+  border: none;
+  outline: none;
+  background-color: orange;
+  padding: 16px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+ul li{
+    list-style: none;
+    font-size: 12px;
+    user-select: none;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    cursor:grab;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url(Images/lol-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    top: 7px;
+    left: 8px;
+    cursor: pointer;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+   background: url(Images/checked-removebg-preview.png);
+   background-size: cover;
+   background-position: center;
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background: #edeff0;
+    cursor: pointer;
+    border-radius: 50%;
+}
